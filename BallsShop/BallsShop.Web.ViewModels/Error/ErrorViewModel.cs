@@ -1,4 +1,4 @@
-namespace BallsShop.Models
+namespace BallsShop.Web.ViewModels.Error
 {
     public class ErrorViewModel
     {

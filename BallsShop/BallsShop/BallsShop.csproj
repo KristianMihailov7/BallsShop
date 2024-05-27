@@ -15,4 +15,11 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.26" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BallsShop.Common\BallsShop.Common.csproj" />
+    <ProjectReference Include="..\BallsShop.Data.Models\BallsShop.Data.Models.csproj" />
+    <ProjectReference Include="..\BallsShop.Data\BallsShop.Data.csproj" />
+    <ProjectReference Include="..\BallsShop.Web.ViewModels\BallsShop.Web.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>
