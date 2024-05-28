@@ -1,0 +1,20 @@
+﻿@using BallsShop.Data.Models.Balls
+@model BallsDetailsViewModel
+
+@{
+    ViewBag.Title = "Ball Details";
+}
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<div class="card text mx-auto" style="width: 25rem;">
+    <img class="card-img-top" src="@Model.ImageUrl" onwaiting="Ball Image">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Category</h5>
+        <p class="card-text">Perimeter - @Model.Perimeter cm</p>
+        <p class="card-text">Shop - @Model.Shop</p>
+        <p class="card-text">Price - @Model.Price$</p>
+</div>
+
+</div>
