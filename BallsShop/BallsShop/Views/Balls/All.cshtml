@@ -1,0 +1,24 @@
+﻿@using BallsShop.Data.Models.Balls
+@model AllBallsViewModel
+
+@{
+    ViewBag.Title = "Balls Shop";
+
+}
+<h2 class ="text-center>"@ViewBag.Title</h2>
+<hr />
+
+<div class="text-center row">
+    @foreach (var ball in Model.Balls)
+    {
+       <div class="card col-4" stile="width: 20rem;">
+           <img class="card-img-top" src="@ball.ImageUrl" alt="Ball Image">
+           <div class="card-body">
+               <h5 class="card-title">@ball.Category</h5>
+               <p class="card-text">Perimeter - @ball.Perimeter cm</p>
+                <p class="card-text">Shop - @ball.Shop</p>
+                <p class="card-text">Price - @ball.Price$</p>
+                </div>
+        </div>
+    }
+</div>

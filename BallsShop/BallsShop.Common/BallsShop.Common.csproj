@@ -17,4 +17,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BallsShop.Data.Models\BallsShop.Data.Models.csproj" />
+  </ItemGroup>
+
 </Project>
