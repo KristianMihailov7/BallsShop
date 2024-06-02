@@ -8,6 +8,7 @@ namespace BallsShop.Data.Models.Balls
 {
     public class BallsDetailsViewModel
     {
+        public int BallId { get; set; }
         public string Category { get; set; } = null!;
 
         public double Perimeter { get; set; }

@@ -1,0 +1,32 @@
+﻿@using BallsShop.Data.Models.Cart
+@model IEnumerable<CartItemViewModel>
+
+<h2>Your Cart</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ball</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><img src="@item.Ball.ImageUrl" alt="Ball Image" style="width: 50px; height: 50px;" /></td>
+                <td>@item.Quantity</td>
+                <td>@item.Ball.Price.ToString("0.00")$</td>
+                <td>@((item.Quantity * item.Ball.Price).ToString("0.00"))$</td>
+                <td>
+                    <form method="post" asp-action="RemoveFromCart" asp-route-cartItemId="@item.CartItemId">
+                        <button type="submit" class="btn btn-danger">Remove</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

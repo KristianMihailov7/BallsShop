@@ -11,14 +11,17 @@
 <div class="text-center row">
     @foreach (var ball in Model.Balls)
     {
-       <div class="card col-4" stile="width: 20rem;">
-           <img class="card-img-top" src="@ball.ImageUrl" alt="Ball Image">
-           <div class="card-body">
-               <h5 class="card-title">@ball.Category</h5>
-               <p class="card-text">Perimeter - @ball.Perimeter cm</p>
+        <div class="card col-4" style="width: 20rem;">
+            <img class="card-img-top" src="@ball.ImageUrl" alt="Ball Image">
+            <div class="card-body">
+                <h5 class="card-title">@ball.Category</h5>
+                <p class="card-text">Perimeter - @ball.Perimeter cm</p>
                 <p class="card-text">Shop - @ball.Shop</p>
                 <p class="card-text">Price - @ball.Price$</p>
-                </div>
+                <form method="post" asp-action="AddToCart" asp-route-ballId="(@ball.BallId)+1">
+                    <button type="submit" class="btn btn-primary">Add to Cart</button>
+                </form>
+            </div>
         </div>
     }
 </div>
