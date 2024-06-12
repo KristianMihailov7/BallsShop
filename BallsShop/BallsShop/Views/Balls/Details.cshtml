@@ -15,7 +15,7 @@
         <p class="card-text">Perimeter - @Model.Perimeter cm</p>
         <p class="card-text">Shop - @Model.Shop</p>
         <p class="card-text">Price - @Model.Price$</p>
-        <form method="post" asp-action="AddToCart" asp-route-ballId="(@Model.BallId)+1">
+        <form method="post" asp-action="AddToCart" asp-route-id="@Model.BallId">
             <button type="submit" class="btn btn-primary">Add to Basket</button>
         </form>
     </div>

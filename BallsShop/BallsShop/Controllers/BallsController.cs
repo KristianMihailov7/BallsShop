@@ -24,6 +24,7 @@ namespace BallsShop.Controllers
                 .Include(b => b.Category)
                 .Select(b => new BallsDetailsViewModel
                 {
+                    BallId = b.BallId,
                     Category = b.Category.Name,
                     Perimeter = b.Perimeter,
                     Shop = b.Shop,
@@ -53,6 +54,7 @@ namespace BallsShop.Controllers
 
             var ballDetails = new BallsDetailsViewModel
             {
+                BallId= ball.BallId,
                 Category = ball.Category.Name,
                 Perimeter = ball.Perimeter,
                 Shop = ball.Shop,
@@ -76,7 +78,7 @@ namespace BallsShop.Controllers
             var model = new AddToCartViewModel
             {
                 BallId = ball.BallId,
-                Quantity = 1 // Default quantity
+                Quantity = 1
             };
 
             return View(model);

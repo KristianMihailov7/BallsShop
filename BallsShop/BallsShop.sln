@@ -5,13 +5,13 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BallsShop", "BallsShop\BallsShop.csproj", "{D00921E8-100C-4F8F-A1E1-B7A5C7E96900}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BallsShop.Common", "BallsShop.Common\BallsShop.Common.csproj", "{BC03CA1C-E8AF-4ADB-B8FE-884BB76AB70F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BallsShop.Common", "BallsShop.Common\BallsShop.Common.csproj", "{BC03CA1C-E8AF-4ADB-B8FE-884BB76AB70F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BallsShop.Data", "BallsShop.Data\BallsShop.Data.csproj", "{61A277FF-F0B3-402D-B674-40649787B3B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BallsShop.Data", "BallsShop.Data\BallsShop.Data.csproj", "{61A277FF-F0B3-402D-B674-40649787B3B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BallsShop.Data.Models", "BallsShop.Data.Models\BallsShop.Data.Models.csproj", "{F213A4C2-DE8C-4C27-B160-400E9612A816}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BallsShop.Data.Models", "BallsShop.Data.Models\BallsShop.Data.Models.csproj", "{F213A4C2-DE8C-4C27-B160-400E9612A816}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BallsShop.Web.ViewModels", "BallsShop.Web.ViewModels\BallsShop.Web.ViewModels.csproj", "{D59971EF-632A-4280-883D-5D163A557635}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BallsShop.Web.ViewModels", "BallsShop.Web.ViewModels\BallsShop.Web.ViewModels.csproj", "{D59971EF-632A-4280-883D-5D163A557635}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
