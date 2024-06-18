@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BallsShop.Data.Models.Balls
+namespace BallsShop.Web.ViewModels.Balls
 {
     public class BallsDetailsViewModel
     {
@@ -15,7 +15,7 @@ namespace BallsShop.Data.Models.Balls
 
         public string Shop { get; set; } = null!;
 
-        public string  ImageUrl { get; set; }
+        public string ImageUrl { get; set; }
 
         public double Price { get; set; }
     }

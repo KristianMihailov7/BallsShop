@@ -1,4 +1,4 @@
-﻿@using BallsShop.Data.Models.Balls
+﻿@using BallsShop.Web.ViewModels.Balls
 @model AllBallsViewModel
 
 @{
@@ -18,9 +18,7 @@
                 <p class="card-text">Perimeter - @ball.Perimeter cm</p>
                 <p class="card-text">Shop - @ball.Shop</p>
                 <p class="card-text">Price - @ball.Price$</p>
-                <form method="post" asp-action="Details" asp-route-id="@ball.BallId">
-                    <button type="submit" class="btn btn-primary">Details</button>
-                </form>
+                <a asp-controller="Balls" asp-action="Details" asp-route-id="@ball.BallId" class="btn btn-primary">Details</a>
             </div>
         </div>
     }

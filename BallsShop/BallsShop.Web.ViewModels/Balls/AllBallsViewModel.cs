@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BallsShop.Data.Models.Balls
+namespace BallsShop.Web.ViewModels.Balls
 {
     public class AllBallsViewModel
     {

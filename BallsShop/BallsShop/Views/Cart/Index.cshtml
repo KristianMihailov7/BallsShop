@@ -1,4 +1,4 @@
-﻿@using BallsShop.Data.Models.Cart
+﻿@using BallsShop.Web.ViewModels.Cart
 @model IEnumerable<CartItemViewModel>
 
 <h2>Your Cart</h2>
@@ -14,13 +14,18 @@
         </tr>
     </thead>
     <tbody>
+        @{
+            decimal totalPrice = 0;
+        }
         @foreach (var item in Model)
         {
+            var itemTotal = item.Quantity * item.Ball.Price;
+            totalPrice += (decimal)itemTotal;
             <tr>
                 <td><img src="@item.Ball.ImageUrl" alt="Ball Image" style="width: 50px; height: 50px;" /></td>
                 <td>@item.Quantity</td>
                 <td>@item.Ball.Price.ToString("0.00")$</td>
-                <td>@((item.Quantity * item.Ball.Price).ToString("0.00"))$</td>
+                <td>@itemTotal.ToString("0.00")$</td>
                 <td>
                     <form method="post" asp-action="RemoveFromCart" asp-route-cartItemId="@item.CartItemId">
                         <button type="submit" class="btn btn-danger">Remove</button>
@@ -30,3 +35,5 @@
         }
     </tbody>
 </table>
+
+<h3>Total Price: @totalPrice.ToString("0.00")$</h3>

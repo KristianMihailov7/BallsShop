@@ -1,8 +1,9 @@
 ﻿using BallsShop.Common;
 using BallsShop.Data;
 using BallsShop.Data.Entities;
-using BallsShop.Data.Models.Balls;
-using BallsShop.Data.Models.Cart;
+using BallsShop.Web.ViewModels.Balls;
+using BallsShop.Web.ViewModels.Cart;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
@@ -85,13 +86,9 @@ namespace BallsShop.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddToCart([Bind("Quantity")] AddToCartViewModel model)
+        [Authorize]
+        public IActionResult AddToCart(AddToCartViewModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model); // Return the view with validation errors
-            }
-
             var ball = _context.Balls.FirstOrDefault(b => b.BallId == model.BallId);
 
             if (ball == null)
@@ -111,6 +108,7 @@ namespace BallsShop.Controllers
             {
                 cart = new Cart { UserId = userId };
                 _context.Carts.Add(cart);
+                _context.SaveChanges();
             }
 
             var cartItem = cart.CartItems.FirstOrDefault(ci => ci.BallId == model.BallId);
@@ -120,13 +118,18 @@ namespace BallsShop.Controllers
             }
             else
             {
-                cartItem = new CartItem { BallId = model.BallId, Quantity = model.Quantity };
-                cart.CartItems.Add(cartItem);
+                cartItem = new CartItem
+                {
+                    BallId = model.BallId,
+                    Quantity = model.Quantity,
+                    CartId = cart.CartId
+                };
+                _context.CartItems.Add(cartItem);
             }
 
             _context.SaveChanges();
 
-            return RedirectToAction("Details", "Balls", new { id = model.BallId });
+            return RedirectToAction("Index", "Cart");
         }
     }
 }

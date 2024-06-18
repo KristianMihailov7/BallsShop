@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BallsShop.Data.Models\BallsShop.Data.Models.csproj" />
+    <ProjectReference Include="..\BallsShop.Web.ViewModels\BallsShop.Web.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

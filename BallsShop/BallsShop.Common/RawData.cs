@@ -1,4 +1,4 @@
-﻿using BallsShop.Data.Models.Balls;
+﻿using BallsShop.Web.ViewModels.Balls;
 using System;
 using System.Collections.Generic;
 using System.Linq;

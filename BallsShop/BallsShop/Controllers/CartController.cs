@@ -1,5 +1,5 @@
 ﻿using BallsShop.Data;
-using BallsShop.Data.Models.Cart;
+using BallsShop.Web.ViewModels.Cart;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
@@ -17,6 +17,11 @@ namespace BallsShop.Controllers
 
         public IActionResult Index()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return Redirect("/Identity/Account/Login");
+            }
+
             var userIdString = User.FindFirst(ClaimTypes.NameIdentifier).Value;
             Guid userId = Guid.Parse(userIdString);
 

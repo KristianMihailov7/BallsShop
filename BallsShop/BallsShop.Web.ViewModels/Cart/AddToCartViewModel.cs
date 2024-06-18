@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BallsShop.Data.Models.Cart
+namespace BallsShop.Web.ViewModels.Cart
 {
     public class AddToCartViewModel
     {

@@ -31,5 +31,8 @@ namespace BallsShop.Data.Entities
 
         [ForeignKey(nameof(CategoryId))]
         public Category Category { get; set; } = null!;
+
+        public Guid SellerId { get; set; }
+        public Seller Seller { get; set; }
     }
 }

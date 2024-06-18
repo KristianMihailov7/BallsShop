@@ -1,4 +1,4 @@
-﻿@using BallsShop.Data.Models.Cart
+﻿@using BallsShop.Web.ViewModels.Cart
 @model AddToCartViewModel
 
 <h2>Add to Cart</h2>
@@ -11,6 +11,7 @@
         <span asp-validation-for="Quantity" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary">Add to Basket</button>
+    @*https://localhost:7228/Balls/AddToCart?ballId=2*@
 </form>
 
 @section Scripts {
